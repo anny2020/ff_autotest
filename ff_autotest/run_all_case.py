@@ -29,7 +29,7 @@ def run_case(all_case,reportName="report"):
     if not os.path.exists(report_path):os.mkdir(report_path)
     # report_abspath = os.path.join(report_path,now+"result.html")
     #为了在jenkins中展示，先去掉时间进行测试
-    report_abspath = os.path.join(report_path+"index.html")
+    report_abspath = os.path.join(report_path,"index.html")
     print("report path:%s"%report_abspath)
     fp = open(report_abspath,"wb")
     runner = HTMLTestRunner(stream=fp,title='自动化测试报告，测试结果如下：',description='用例执行情况')
@@ -39,11 +39,11 @@ def run_case(all_case,reportName="report"):
 
 def get_report_file(report_path):
     '''第三步：获取最新的测试报告'''
-    lists = os.listdir(report_path)
-    lists.sort(key=lambda fn: os.path.getmtime(os.path.join(report_path,fn)))
-    print(u"最新测试生成的报告: "+lists[-1])
+    #lists = os.listdir(report_path)
+    #lists.sort(key=lambda fn: os.path.getmtime(os.path.join(report_path,fn)))
+    #print(u"最新测试生成的报告: "+lists[-1])
     #找到最新生成的报告
-    report_file = os.path.join(report_path,lists[-1])
+    report_file = os.path.join(report_path,"index.html")
     return report_file
 
 
