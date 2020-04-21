@@ -27,7 +27,9 @@ def run_case(all_case,reportName="report"):
     report_path = os.path.join(cur_path,reportName) #用例文件夹
     #如果不存在这个report文件夹，就自动创建一个
     if not os.path.exists(report_path):os.mkdir(report_path)
-    report_abspath = os.path.join(report_path,now+"result.html")
+    # report_abspath = os.path.join(report_path,now+"result.html")
+    #为了在jenkins中展示，先去掉时间进行测试
+    report_abspath = os.path.join(report_path+"index.html")
     print("report path:%s"%report_abspath)
     fp = open(report_abspath,"wb")
     runner = HTMLTestRunner(stream=fp,title='自动化测试报告，测试结果如下：',description='用例执行情况')
