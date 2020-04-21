@@ -80,10 +80,10 @@ if __name__ == '__main__':
     #获取最新的测试报告文件
     report_path = os.path.join(cur_path,"report")    #用例文件夹
     report_file = get_report_file(report_path)       #3获取最新的测试报告
-    sender = "***********@163.com"
+    sender = "18537810265@163.com"
     psw = "********"
     smtp_server = "smtp.163.com"
     port = 465
-    receiver = "********@qq.com"
-    send_email(sender,psw,receiver,smtp_server,report_file,port)
+    receiver = "714552125@qq.com"
+    #send_email(sender,psw,receiver,smtp_server,report_file,port)
 
