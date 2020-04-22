@@ -100,7 +100,7 @@ rule = "test*.py"
 discover = unittest.defaultTestLoader.discover(start_dir=case_path,pattern=rule)
 print(discover)
 
-report_path = r"E:\PycharmProjects\ffyj\report\index"+".html"
+report_path = r"E:\PycharmProjects\ffyj\report\report"+".html"
 fp = open(report_path,'wb')
 
 runner = HTMLTestRunner(stream=fp,title='报告名称',description='描述')
